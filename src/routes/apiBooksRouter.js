@@ -1,5 +1,5 @@
 const express = require("express");
-const apiBooks = require("../api/bookHandlers");
+const apiBooks = require("../api/booksHandlers");
 const fileMulter = require("../middleware/file");
 
 const apiBooksRouter = express.Router();
