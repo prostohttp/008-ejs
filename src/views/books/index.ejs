@@ -4,7 +4,7 @@
 	<% books.map((book) => { %>
 	<div class="text-center bg-[#f7f7f7] rounded-[4px] overflow-hidden py-[20px] px-[15px] flex flex-col">
     <a href="<%= "/books/" + book.id %>" class="flex h-[270px] items-center">
-      <img src="<%= book.fileCover %>" alt="">
+      <img src="<%= book.filecover %>" alt="">
     </a>
     <a href="<%= "/books/" + book.id %>" class="font-bold leading-[20px] mb-[20px]">
       <%= book.title %>

@@ -6,14 +6,17 @@ const fileMulter = require("../middleware/file");
 const router = express.Router();
 router.post(
 	"/api/books",
-	fileMulter.fields([{ name: "fileCover", maxCount: 1 }, { name: "fileBook", maxCount: 1 }]),
+	fileMulter.fields([
+		{ name: "filecover", maxCount: 1 },
+		{ name: "filebook", maxCount: 1 },
+	]),
 	(req, res) => {
 		const { books } = bookStore;
 		if (req.files) {
 			const { path: pathFileCover, originalname: originalNameFileCover } =
-				req.files["fileCover"][0];
+				req.files["filecover"][0];
 			const { path: pathFileBook, originalname: originalNameFileBook } =
-				req.files["fileBook"][0];
+				req.files["filebook"][0];
 
 			const newBook = new Book(
 				req.body.title,

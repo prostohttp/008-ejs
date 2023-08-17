@@ -7,9 +7,9 @@ class Book {
 	 * @param {string} description - The description of the book.
 	 * @param {string} authors - The authors of the book.
 	 * @param {boolean} favorite - The favorite status of the book.
-	 * @param {string} fileCover - The file cover of the book.
+	 * @param {string} filecover - The file cover of the book.
 	 * @param {string} fileName - The file name of the book.
-	 * @param {string} fileBook - The file of the book.
+	 * @param {string} filebook - The file of the book.
 	 * @param {string} originalNameFileCover - The original name file cover of the book.
 	 * @param {string} originalNameFileBook - The original name of file of the book.
 	 * @param {string} id - The ID of the book.
@@ -19,9 +19,9 @@ class Book {
 		description = "",
 		authors = "",
 		favorite = false,
-		fileCover = "",
+		filecover = "",
 		fileName = "",
-		fileBook = "",
+		filebook = "",
 		originalNameFileCover = "",
 		originalNameFileBook = "",
 		id = uuid()
@@ -30,9 +30,9 @@ class Book {
 		this.description = description;
 		this.authors = authors;
 		this.favorite = favorite;
-		this.fileCover = fileCover;
+		this.filecover = filecover;
 		this.fileName = fileName;
-		this.fileBook = fileBook;
+		this.filebook = filebook;
 		this.originalNameFileCover = originalNameFileCover;
 		this.originalNameFileBook = originalNameFileBook
 		this.id = id;

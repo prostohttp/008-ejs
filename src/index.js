@@ -9,7 +9,7 @@ const view = require("./routes/viewRoute");
 const create = require("./routes/createRoute");
 const update = require("./routes/updateRoute");
 const getBook = require("./api/getBook");
-const addBook = require("./api/addBook");
+// const addBook = require("./api/addBook");
 const putBook = require("./api/putBook");
 const bookDownload = require("./api/bookDownload");
 const postUserLogin = require("./api/postUserLogin");
@@ -28,10 +28,10 @@ app.use("", update);
 app.use("", bookDownload);
 app.use("", postUserLogin);
 app.use("", deleteBook);
+// app.use("", putBook);
 app.use("", getBooks);
 app.use("", getBook);
-app.use("", addBook);
-app.use("", putBook);
+// app.use("", addBook);
 app.use(notFound);
 
 

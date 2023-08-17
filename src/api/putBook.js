@@ -6,16 +6,16 @@ const router = express.Router();
 router.put(
 	"/api/books/:id",
 	fileMulter.fields([
-		{ name: "fileCover", maxCount: 1 },
-		{ name: "fileBook", maxCount: 1 },
+		{ name: "filecover", maxCount: 1 },
+		{ name: "filebook", maxCount: 1 },
 	]),
 	(req, res) => {
 		const { books } = bookStore;
 		const { title, description, authors, favorite, fileName } = req.body;
 		const { path: pathFileCover, originalname: originalNameFileCover } =
-			req.files["fileCover"][0];
+			req.files["filecover"][0];
 		const { path: pathFileBook, originalname: originalNameFileBook } =
-			req.files["fileBook"][0];
+			req.files["filebook"][0];
 		const { id } = req.params;
 		const index = books.findIndex((book) => book.id === id);
 		if (index !== -1) {
@@ -25,9 +25,9 @@ router.put(
 				description,
 				authors,
 				favorite,
-				pathFileCover,
+				filecover: pathFileCover,
 				fileName,
-				pathFileBook,
+				filebook: pathFileBook,
 				originalNameFileCover,
 				originalNameFileBook,
 			};

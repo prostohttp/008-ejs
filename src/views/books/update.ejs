@@ -33,18 +33,18 @@
 	<input type="checkbox" name="favorite" id="favorite" <%= book.favorite ?
 	"checked" : "" %> class="border-[1px] rounded-[4px] h-[40px] px-[20px]
 	w-[20px] border-[#ccc] mb-[20px]" />
-	<label for="fileBook" class="block mb-[10px] font-bold hover:cursor-pointer"
+	<label for="filebook" class="block mb-[10px] font-bold hover:cursor-pointer"
 		>Постер книги
 		<img
-			src="<%= book.fileCover %>"
+			src="<%= book.filecover %>"
 			alt="<%= book.title %>"
 			class="w-[150px] %>"
 		/>
 	</label>
 	<input
 		type="file"
-		name="fileBook"
-		id="fileBook"
+		name="filebook"
+		id="filebook"
 		class="rounded-[4px] my-[20px] hidden"
 	/>
 	<button
