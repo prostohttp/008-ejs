@@ -15,9 +15,9 @@ const addBookHandler = (req, res) => {
 			req.body.description,
 			req.body.authors,
 			req.body.favorite,
-			pathFileCover,
+			"/" + pathFileCover,
 			req.body.fileName,
-			pathFileBook,
+			"/" + pathFileBook,
 			originalNameFileCover,
 			originalNameFileBook
 		);
